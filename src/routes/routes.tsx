@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { Button } from '@mui/material';
 import { useDrawerContext } from "../shrades/contexts";
 import { useEffect } from "react";
+import { Home } from "../pages";
 
 export const AppRoutes = () => {
   const { toggleDrawerOpen, setDrawerOptions } = useDrawerContext();
@@ -28,7 +29,7 @@ export const AppRoutes = () => {
 
   return (
     <Routes>
-      <Route path="/pagina-inicial" element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen}>Teste</Button>} />
+      <Route path="/pagina-inicial" element={<Home/>} />
       <Route path="/test1" element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen}>Teste</Button>} />
       <Route path="/test2" element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen}>Teste</Button>} />
 
