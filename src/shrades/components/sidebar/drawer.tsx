@@ -72,6 +72,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ children }) => {
           </Box>
 
         </Box>
+        <Divider/>
+        
       </Drawer>
 
       <Box height="100vh" marginLeft={smDown ? 0 : theme.spacing(28)}>

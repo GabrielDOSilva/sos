@@ -1,11 +1,11 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Button } from '@mui/material';
+
 import { useDrawerContext } from "../shrades/contexts";
 import { useEffect } from "react";
 import { Home } from "../pages";
 
 export const AppRoutes = () => {
-  const { toggleDrawerOpen, setDrawerOptions } = useDrawerContext();
+  const { setDrawerOptions } = useDrawerContext();
 
   useEffect(() =>{
     setDrawerOptions([
@@ -15,23 +15,18 @@ export const AppRoutes = () => {
         path: '/pagina-inicial',
       },
       {
-        label: 'test1',
-        icon: 'map',
-        path: '/test1',
+        label: 'Users',
+        icon: 'group',
+        path: '/usuarios',
       },
-      {
-        label: 'test2',
-        icon: 'star',
-        path: '/test2',
-      }
     ])
   }, []);
 
   return (
     <Routes>
       <Route path="/pagina-inicial" element={<Home/>} />
-      <Route path="/test1" element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen}>Teste</Button>} />
-      <Route path="/test2" element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen}>Teste</Button>} />
+      <Route path="/usuarios" element={<Home/>} />
+      
 
       <Route path="*" element={<Navigate to="/pagina-inicial" />} /> 
     </Routes>

@@ -1,8 +1,10 @@
 import { BaseLayout } from "../../shrades/layouts";
 
+
+
 export const Home = () => {
     return(
-        <BaseLayout>
+        <BaseLayout titulo='Home' barraDeFerramentas={<>Barra de ferramentas</>}>
             Testando
         </BaseLayout>
     );
