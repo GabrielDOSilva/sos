@@ -1,11 +1,13 @@
-import { Avatar, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, ListItemText, useMediaQuery, useTheme } from '@mui/material';
+import { Avatar, Divider, Drawer, Icon, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
 import { Box } from '@mui/system';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 
-import { useDrawerContext } from '../../contexts';
+import { useAppThemeContext, useDrawerContext } from '../../contexts';
 
 interface SidebarProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 };
 
 interface IListItemLinkProps {
@@ -42,7 +44,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ children }) => {
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
   const { isDrawerOpen, drawerOptions, toggleDrawerOpen } = useDrawerContext();
-
+  const { toggleTheme } = useAppThemeContext();
   return (
     <>
       <Drawer open={isDrawerOpen} variant={smDown ? 'temporary' : 'permanent'} onClose={toggleDrawerOpen}>
@@ -72,8 +74,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ children }) => {
           </Box>
 
         </Box>
-        <Divider/>
-        
+
+        <Box display="flex" alignItems="center" justifyContent="center">
+          <Typography>
+          {theme.palette.mode} mode
+          </Typography>
+          <IconButton onClick={toggleTheme}>
+            {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
+
+        </Box>
+
       </Drawer>
 
       <Box height="100vh" marginLeft={smDown ? 0 : theme.spacing(28)}>

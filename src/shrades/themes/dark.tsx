@@ -3,6 +3,7 @@ import { blueGrey, grey } from '@mui/material/colors';
 
 export const DarkTheme = createTheme({
   palette: {
+    mode: 'dark',
     primary: grey,
     divider: grey[700],
     text: {

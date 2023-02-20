@@ -3,6 +3,7 @@ import { grey, blue, cyan as lightBlue, } from '@mui/material/colors';
 
 export const LightTheme = createTheme({
   palette: {
+    mode: 'light',
     primary: blue,
     divider: grey[200],
     text: {
