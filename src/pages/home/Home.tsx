@@ -1,4 +1,4 @@
-import { Tools } from "../../shrades/components";
+import { DetailTools, ListingTools } from "../../shrades/components";
 import { BaseLayout } from "../../shrades/layouts";
 
 
@@ -8,8 +8,8 @@ export const Home = () => {
         <BaseLayout
             titulo='Home page'
             barraDeFerramentas={(
-                <Tools
-                    showInputSearch
+                <DetailTools
+                    
                 />
             )}>
             Testando

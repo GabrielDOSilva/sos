@@ -1,7 +1,7 @@
 import { Box, TextField, Button, Paper, useTheme, Icon } from "@mui/material";
 
 
-interface IToolsProps {
+interface IListingToolsProps {
     textSearch?: string;
     showInputSearch?: boolean;
     changTextSearch?: (newText: string) => void;
@@ -10,7 +10,7 @@ interface IToolsProps {
     ClickButon?: () => void;
 }
 
-export const Tools: React.FC<IToolsProps> = (
+export const ListingTools: React.FC<IListingToolsProps> = (
     { 
         textSearch,
         showInputSearch = false,
