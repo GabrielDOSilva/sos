@@ -15,7 +15,7 @@ export const ListingTools: React.FC<IListingToolsProps> = (
         textSearch,
         showInputSearch = false,
         changTextSearch,
-        textButton = 'New',
+        textButton = 'Search',
         showButton = true,
         ClickButon
     }) => {
@@ -49,7 +49,7 @@ export const ListingTools: React.FC<IListingToolsProps> = (
                     disableElevation
                     variant="contained"
                     onClick={ClickButon}
-                    endIcon={<Icon>add</Icon>}
+                    endIcon={<Icon>search</Icon>}
                 >
                     {textButton}
                 </Button>

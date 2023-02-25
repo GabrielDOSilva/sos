@@ -8,9 +8,7 @@ export const Home = () => {
         <BaseLayout
             titulo='Home page'
             barraDeFerramentas={(
-                <DetailTools
-                    
-                />
+                <DetailTools />
             )}>
             Testando
         </BaseLayout>
